@@ -3,235 +3,336 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Journey One Landscape Team – Irrigation Repair, San Antonio TX</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <title>Journey One Landscape Team – Irrigation Repair San Antonio, TX</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy:      #0c1b33;
-      --blue:      #1a3a6b;
-      --mid-blue:  #2558a8;
-      --accent:    #3a8fd4;
-      --light-blue:#deeaf8;
-      --white:     #ffffff;
-      --gray:      #f5f7fa;
-      --border:    #dde3ed;
-      --text:      #1c2b40;
-      --muted:     #5f718f;
+      --navy:     #0b1d3a;
+      --dark:     #0d2757;
+      --blue:     #1a4dbd;
+      --mid:      #2563eb;
+      --bright:   #3b82f6;
+      --light:    #eff6ff;
+      --border:   #dbeafe;
+      --white:    #ffffff;
+      --gray:     #f8fafc;
+      --text:     #0f172a;
+      --body:     #334155;
+      --muted:    #64748b;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       color: var(--text);
       background: var(--white);
       overflow-x: hidden;
-      line-height: 1.6;
     }
 
-    /* ── NAV ── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
+    /* ── TOP BAR ── */
+    .topbar {
+      background: var(--navy);
+      padding: 0.55rem 5%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1.1rem 5%;
-      background: rgba(12, 27, 51, 0.97);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(255,255,255,0.07);
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .topbar a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .topbar a:hover { color: var(--white); }
+
+    .topbar-right { display: flex; gap: 1.75rem; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid #e2e8f0;
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
     }
 
     .nav-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.15rem;
-      color: var(--white);
-      letter-spacing: 0.01em;
-      line-height: 1.2;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+      text-decoration: none;
     }
 
-    .nav-logo span { color: var(--accent); }
+    .nav-logo span { color: var(--mid); }
 
-    .nav-links { display: flex; gap: 2.25rem; list-style: none; }
+    .nav-links { display: flex; gap: 0.25rem; list-style: none; }
+
     .nav-links a {
-      color: rgba(255,255,255,0.7);
+      color: var(--body);
       text-decoration: none;
       font-size: 0.875rem;
-      font-weight: 400;
-      letter-spacing: 0.02em;
-      transition: color 0.2s;
+      font-weight: 500;
+      padding: 0.45rem 0.9rem;
+      border-radius: 4px;
+      transition: background 0.15s, color 0.15s;
     }
-    .nav-links a:hover { color: var(--white); }
+
+    .nav-links a:hover {
+      background: var(--light);
+      color: var(--blue);
+    }
+
+    .nav-cta {
+      background: var(--mid);
+      color: var(--white) !important;
+      padding: 0.5rem 1.25rem !important;
+      border-radius: 4px;
+      font-weight: 600 !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--blue) !important;
+      color: var(--white) !important;
+    }
 
     /* ── HERO ── */
     .hero {
-      min-height: 100vh;
       background: var(--navy);
-      display: flex;
-      align-items: center;
-      padding: 7rem 5% 5rem;
+      padding: 6rem 5% 5.5rem;
       position: relative;
       overflow: hidden;
     }
 
-    .hero::before {
+    .hero::after {
       content: '';
       position: absolute;
-      top: 0; right: 0;
-      width: 55%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(26, 58, 107, 0.25) 0%, transparent 60%);
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 85% 50%, rgba(37, 99, 235, 0.18) 0%, transparent 100%),
+        radial-gradient(ellipse 40% 50% at 10% 80%, rgba(30, 64, 175, 0.15) 0%, transparent 100%);
       pointer-events: none;
     }
 
     .hero-content {
-      max-width: 620px;
+      max-width: 680px;
       position: relative;
       z-index: 1;
-      animation: fadeUp 0.8s ease both;
+      animation: fadeUp 0.7s ease both;
     }
 
-    .hero-eyebrow {
+    .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #93c5fd;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--accent);
+      padding: 0.35rem 0.875rem;
+      border-radius: 2rem;
       margin-bottom: 1.5rem;
     }
 
-    .hero-eyebrow::before {
-      content: '';
-      display: block;
-      width: 20px;
-      height: 1px;
-      background: var(--accent);
-    }
+    .hero-badge svg { width: 12px; height: 12px; }
 
     .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.6rem, 4.5vw, 4rem);
-      line-height: 1.12;
+      font-size: clamp(2.6rem, 4.5vw, 3.75rem);
+      font-weight: 800;
+      line-height: 1.1;
       color: var(--white);
-      margin-bottom: 1.5rem;
-      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
     }
 
-    .hero h1 em {
-      font-style: italic;
-      color: var(--accent);
+    .hero h1 .highlight {
+      color: var(--bright);
     }
 
     .hero p {
       font-size: 1.05rem;
       line-height: 1.75;
-      color: rgba(255,255,255,0.6);
-      margin-bottom: 2.5rem;
-      max-width: 480px;
-      font-weight: 300;
-    }
-
-    .hero-cta { display: flex; gap: 0.875rem; flex-wrap: wrap; }
-
-    .btn-primary {
-      display: inline-block;
-      background: var(--accent);
-      color: var(--white);
-      padding: 0.8rem 1.875rem;
-      border-radius: 4px;
-      font-weight: 500;
-      font-size: 0.9rem;
-      text-decoration: none;
-      letter-spacing: 0.01em;
-      transition: background 0.2s, box-shadow 0.2s;
-    }
-    .btn-primary:hover {
-      background: #2f7dbf;
-      box-shadow: 0 6px 20px rgba(58, 143, 212, 0.3);
-    }
-
-    .btn-outline {
-      display: inline-block;
-      border: 1px solid rgba(255,255,255,0.25);
-      color: rgba(255,255,255,0.8);
-      padding: 0.8rem 1.875rem;
-      border-radius: 4px;
+      color: rgba(255,255,255,0.58);
+      margin-bottom: 2.25rem;
+      max-width: 520px;
       font-weight: 400;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: border-color 0.2s, color 0.2s;
     }
-    .btn-outline:hover {
-      border-color: rgba(255,255,255,0.55);
+
+    .hero-cta { display: flex; gap: 0.875rem; flex-wrap: wrap; align-items: center; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.75rem;
+      border-radius: 5px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-blue {
+      background: var(--mid);
       color: var(--white);
     }
 
-    /* ── SERVICES ── */
-    .services {
-      padding: 6rem 5%;
-      background: var(--gray);
+    .btn-blue:hover {
+      background: var(--blue);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
     }
 
-    .section-label {
+    .btn-white {
+      background: rgba(255,255,255,0.1);
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .btn-white:hover {
+      background: rgba(255,255,255,0.18);
+    }
+
+    .btn-dark {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .btn-dark:hover { background: var(--dark); }
+
+    /* ── TRUST STRIP ── */
+    .trust {
+      background: var(--white);
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1.5rem 5%;
+    }
+
+    .trust-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .trust-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--light);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--mid);
+      flex-shrink: 0;
+    }
+
+    .trust-icon svg { width: 18px; height: 18px; }
+
+    .trust-item strong {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .trust-item span {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    /* ── SECTION SHARED ── */
+    .section-eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
       font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
+      font-weight: 700;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--mid-blue);
+      color: var(--mid);
       margin-bottom: 0.75rem;
     }
 
-    .section-label::before {
+    .section-eyebrow::before {
       content: '';
       display: block;
-      width: 18px;
-      height: 1px;
-      background: var(--mid-blue);
+      width: 22px;
+      height: 2px;
+      background: var(--mid);
+      border-radius: 1px;
     }
 
-    .section-header {
-      max-width: 540px;
-      margin-bottom: 3.5rem;
+    .section-eyebrow.light { color: #93c5fd; }
+    .section-eyebrow.light::before { background: #93c5fd; }
+
+    h2.section-title {
+      font-size: clamp(1.85rem, 2.8vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.875rem;
     }
 
-    .section-header.centered {
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    h2.section-title.dark { color: var(--navy); }
+    h2.section-title.light { color: var(--white); }
 
-    .section-header.centered .section-label {
-      justify-content: center;
-    }
-
-    .section-header.centered .section-label::before { display: none; }
-
-    .section-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.9rem, 3vw, 2.6rem);
-      color: var(--navy);
-      line-height: 1.2;
-      margin-bottom: 0.75rem;
-    }
-
-    .section-header p {
-      color: var(--muted);
+    .section-sub {
       font-size: 0.975rem;
       line-height: 1.75;
+      color: var(--muted);
+      max-width: 480px;
     }
+
+    .section-sub.light { color: rgba(255,255,255,0.55); }
+
+    /* ── SERVICES ── */
+    .services {
+      padding: 5.5rem 5%;
+      background: var(--gray);
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .services-header .section-eyebrow { justify-content: center; }
+    .services-header .section-eyebrow::before { display: none; }
+    .services-header .section-sub { margin: 0 auto; }
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.25rem;
       max-width: 1100px;
       margin: 0 auto;
@@ -239,105 +340,161 @@
 
     .service-card {
       background: var(--white);
-      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
       padding: 1.875rem 1.75rem;
-      border: 1px solid var(--border);
-      transition: box-shadow 0.25s, border-color 0.25s;
+      transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
     }
 
     .service-card:hover {
-      box-shadow: 0 8px 30px rgba(12, 27, 51, 0.08);
-      border-color: #c5d5e8;
+      box-shadow: 0 10px 40px rgba(15, 23, 42, 0.1);
+      border-color: var(--border);
+      transform: translateY(-3px);
     }
 
     .service-icon {
-      width: 44px;
-      height: 44px;
-      background: var(--light-blue);
-      border-radius: 5px;
+      width: 46px;
+      height: 46px;
+      background: var(--light);
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
+      color: var(--mid);
       margin-bottom: 1.25rem;
-      color: var(--mid-blue);
     }
 
-    .service-icon svg { width: 20px; height: 20px; }
+    .service-icon svg { width: 22px; height: 22px; }
 
     .service-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      color: var(--navy);
-      margin-bottom: 0.55rem;
+      font-size: 1.05rem;
       font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
     }
 
     .service-card p {
-      font-size: 0.88rem;
+      font-size: 0.875rem;
       color: var(--muted);
       line-height: 1.7;
     }
+
+    .service-card .learn-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--mid);
+      text-decoration: none;
+      transition: gap 0.2s;
+    }
+
+    .service-card .learn-more:hover { gap: 0.6rem; }
 
     /* ── ABOUT ── */
     .about {
       padding: 6rem 5%;
       background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about::before {
+      content: '';
+      position: absolute;
+      right: -5%;
+      top: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.2) 0%, transparent 70%);
+      pointer-events: none;
     }
 
     .about-inner {
       max-width: 1100px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.1fr 0.9fr;
       gap: 5rem;
       align-items: center;
+      position: relative;
+      z-index: 1;
     }
 
-    .about-text .section-label { color: var(--accent); }
-    .about-text .section-label::before { background: var(--accent); }
+    .about-features {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin: 2rem 0;
+    }
 
-    .about-text h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+    .about-feature {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .about-feature-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(59, 130, 246, 0.15);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--bright);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .about-feature-icon svg { width: 17px; height: 17px; }
+
+    .about-feature-text strong {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
       color: var(--white);
-      line-height: 1.2;
-      margin-bottom: 1.25rem;
+      margin-bottom: 0.2rem;
     }
 
-    .about-text p {
-      color: rgba(255,255,255,0.58);
-      font-size: 0.975rem;
-      line-height: 1.8;
-      margin-bottom: 0.875rem;
+    .about-feature-text span {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.5;
     }
-
-    .about-text p:last-of-type { margin-bottom: 2rem; }
 
     .about-stats {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.125rem;
+      gap: 1rem;
     }
 
-    .stat-box {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.09);
-      border-radius: 6px;
+    .stat-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
       padding: 1.5rem 1.25rem;
+      transition: background 0.2s;
     }
+
+    .stat-card:hover { background: rgba(255,255,255,0.08); }
 
     .stat-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: var(--accent);
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: var(--bright);
+      letter-spacing: -0.03em;
       line-height: 1;
       margin-bottom: 0.35rem;
     }
 
     .stat-label {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: rgba(255,255,255,0.45);
-      line-height: 1.4;
+      line-height: 1.45;
     }
 
     /* ── CONTACT ── */
@@ -347,27 +504,28 @@
     }
 
     .contact-inner {
-      max-width: 960px;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
     .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3.5rem;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
       margin-top: 3rem;
     }
 
     .contact-info h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.35rem;
-      color: var(--navy);
-      margin-bottom: 0.875rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
     }
 
     .contact-info > p {
+      font-size: 0.9rem;
       color: var(--muted);
-      font-size: 0.925rem;
       line-height: 1.75;
       margin-bottom: 2rem;
     }
@@ -376,32 +534,38 @@
       display: flex;
       align-items: center;
       gap: 0.875rem;
-      margin-bottom: 1.125rem;
+      margin-bottom: 1rem;
       text-decoration: none;
       color: var(--text);
-      transition: color 0.2s;
+      padding: 0.875rem 1rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 7px;
+      transition: border-color 0.2s, background 0.2s;
     }
 
-    .contact-method:hover { color: var(--mid-blue); }
+    .contact-method:hover {
+      border-color: var(--border);
+      background: var(--light);
+    }
 
     .contact-method-icon {
-      width: 42px;
-      height: 42px;
-      background: var(--light-blue);
-      border-radius: 5px;
+      width: 40px;
+      height: 40px;
+      background: var(--light);
+      border-radius: 7px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--mid-blue);
+      color: var(--mid);
       flex-shrink: 0;
     }
 
-    .contact-method-icon svg { width: 18px; height: 18px; }
+    .contact-method-icon svg { width: 17px; height: 17px; }
 
     .contact-method-text strong {
       display: block;
-      font-size: 0.72rem;
-      font-weight: 600;
+      font-size: 0.7rem;
+      font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--muted);
@@ -409,201 +573,327 @@
     }
 
     .contact-method-text span {
-      font-size: 0.975rem;
-      color: var(--navy);
-      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--text);
+      font-weight: 600;
     }
 
-    .contact-form { display: flex; flex-direction: column; gap: 0.875rem; }
+    /* ── FORM ── */
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+
+    .contact-form { display: flex; flex-direction: column; gap: 0.75rem; }
+
+    .form-field { display: flex; flex-direction: column; }
+
+    .form-field label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--body);
+      margin-bottom: 0.35rem;
+      letter-spacing: 0.02em;
+    }
 
     .contact-form input,
+    .contact-form select,
     .contact-form textarea {
       width: 100%;
-      padding: 0.8rem 1rem;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.925rem;
+      padding: 0.75rem 0.9rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 5px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9rem;
       color: var(--text);
-      background: var(--gray);
-      transition: border-color 0.2s, background 0.2s;
+      background: var(--white);
       outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
 
     .contact-form input:focus,
+    .contact-form select:focus,
     .contact-form textarea:focus {
-      border-color: var(--accent);
-      background: var(--white);
+      border-color: var(--mid);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
     }
 
-    .contact-form textarea { resize: vertical; min-height: 110px; }
+    .contact-form textarea { resize: vertical; min-height: 105px; }
 
-    .contact-form button {
-      background: var(--navy);
+    .contact-form .submit-btn {
+      background: var(--mid);
       color: var(--white);
       border: none;
-      padding: 0.85rem 2rem;
-      border-radius: 4px;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.925rem;
-      font-weight: 500;
+      padding: 0.875rem 2rem;
+      border-radius: 5px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
       cursor: pointer;
-      transition: background 0.2s;
-      align-self: flex-start;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      width: 100%;
+      justify-content: center;
     }
 
-    .contact-form button:hover { background: var(--blue); }
+    .contact-form .submit-btn:hover {
+      background: var(--blue);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+    }
+
+    .form-note {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.5;
+    }
 
     /* ── FOOTER ── */
     footer {
       background: var(--navy);
-      padding: 2rem 5%;
+      padding: 3rem 5% 2rem;
+    }
+
+    .footer-top {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.7;
+      margin-top: 0.75rem;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+
+    .footer-col ul a {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-col ul a:hover { color: rgba(255,255,255,0.85); }
+
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-top: 1.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 0.75rem;
-      border-top: 1px solid rgba(255,255,255,0.06);
+      gap: 0.5rem;
     }
 
-    footer p {
-      color: rgba(255,255,255,0.35);
-      font-size: 0.82rem;
+    .footer-bottom p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.3);
     }
-
-    footer .footer-links {
-      display: flex;
-      gap: 1.75rem;
-      list-style: none;
-    }
-
-    footer .footer-links a {
-      color: rgba(255,255,255,0.35);
-      text-decoration: none;
-      font-size: 0.82rem;
-      transition: color 0.2s;
-    }
-
-    footer .footer-links a:hover { color: rgba(255,255,255,0.65); }
 
     /* ── ANIMATION ── */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
+      from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
     .fade-in {
       opacity: 0;
       transform: translateY(16px);
-      transition: opacity 0.55s ease, transform 0.55s ease;
+      transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-inner   { grid-template-columns: 1fr; gap: 3rem; }
+      .contact-grid  { grid-template-columns: 1fr; gap: 2.5rem; }
+      .footer-top    { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .topbar { display: none; }
       .nav-links { display: none; }
-      .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-      .contact-grid { grid-template-columns: 1fr; }
+      .trust-inner { grid-template-columns: 1fr 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
       .about-stats { grid-template-columns: 1fr 1fr; }
-      footer { flex-direction: column; text-align: center; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
     }
   </style>
 </head>
 <body>
 
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span>Serving San Antonio &amp; surrounding areas</span>
+    <div class="topbar-right">
+      <a href="tel:+17262318748">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (726) 231-8748
+      </a>
+      <a href="mailto:joltirrigator@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        joltirrigator@gmail.com
+      </a>
+    </div>
+  </div>
+
+  <!-- NAV -->
   <nav>
-    <div class="nav-logo">Journey <span>One</span> Landscape Team</div>
+    <a href="#" class="nav-logo">Journey <span>One</span> Landscape Team</a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Get a Free Quote</a></li>
     </ul>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <div class="hero-eyebrow">San Antonio, TX</div>
-      <h1>Irrigation Repairs<br><em>Done Right</em></h1>
-      <p>Journey One Landscape Team repairs broken heads, damaged lines, stuck valves, and underground leaks. We work on residential and commercial properties throughout San Antonio — no shortcuts, no runaround.</p>
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        San Antonio, TX
+      </div>
+      <h1>Irrigation Repairs<br><span class="highlight">Done Right.</span></h1>
+      <p>Journey One Landscape Team repairs and rebuilds irrigation systems for homeowners and businesses throughout San Antonio. Licensed, local, and straight with you.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn-primary">Get a Free Quote</a>
-        <a href="#services" class="btn-outline">Our Services</a>
+        <a href="#contact" class="btn btn-blue">
+          Get a Free Quote
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="tel:+17262318748" class="btn btn-white">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (726) 231-8748
+        </a>
       </div>
     </div>
   </section>
 
+  <!-- TRUST STRIP -->
+  <div class="trust">
+    <div class="trust-inner">
+      <div class="trust-item fade-in">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <strong>Licensed Irrigator</strong>
+          <span>State of Texas</span>
+        </div>
+      </div>
+      <div class="trust-item fade-in">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div>
+          <strong>5+ Years in Business</strong>
+          <span>San Antonio based</span>
+        </div>
+      </div>
+      <div class="trust-item fade-in">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <strong>Same-Day Response</strong>
+          <span>Mon – Sat</span>
+        </div>
+      </div>
+      <div class="trust-item fade-in">
+        <div class="trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div>
+          <strong>Free Estimates</strong>
+          <span>No obligation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- SERVICES -->
   <section class="services" id="services">
-    <div class="section-header centered fade-in">
-      <div class="section-label">What We Do</div>
-      <h2>Irrigation Services</h2>
-      <p>We handle repairs, rebuilds, and anything in between — residential or commercial.</p>
+    <div class="services-header fade-in">
+      <div class="section-eyebrow">What We Do</div>
+      <h2 class="section-title dark" style="margin-bottom:0.5rem">Irrigation Services</h2>
+      <p class="section-sub">Residential and commercial — repairs, rebuilds, and everything in between.</p>
     </div>
     <div class="services-grid">
 
       <div class="service-card fade-in">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2C6 9 4 13 4 16a8 8 0 0 0 16 0c0-3-2-7-8-14z"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6 9 4 13 4 16a8 8 0 0 0 16 0c0-3-2-7-8-14z"/></svg>
         </div>
         <h3>Irrigation Repairs</h3>
-        <p>Broken heads, damaged supply lines, stuck or leaking valves — we diagnose the issue and fix it the same visit when possible.</p>
+        <p>Broken heads, damaged lines, stuck or leaking valves. We diagnose and fix it the same visit when possible.</p>
+        <a href="#contact" class="learn-more">Request service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
 
       <div class="service-card fade-in">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
         </div>
         <h3>Zone Rebuilds</h3>
-        <p>Full zone rebuilds designed for proper head-to-head coverage, with the right equipment for your lawn size and soil type.</p>
+        <p>Full zone rebuilds for proper head-to-head coverage on any lawn size, using the right heads for your soil type.</p>
+        <a href="#contact" class="learn-more">Request service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
 
       <div class="service-card fade-in">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
         </div>
         <h3>Leak Detection</h3>
-        <p>High water bills and soft spots in the yard are signs of an underground leak. We locate and repair them before the damage spreads.</p>
+        <p>High water bills and soft spots in the yard point to underground leaks. We find them and repair them before damage spreads.</p>
+        <a href="#contact" class="learn-more">Request service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
 
       <div class="service-card fade-in">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
         <h3>Backflow Repair</h3>
-        <p>Licensed backflow preventer testing, repair, and replacement. We keep your system compliant with SAWS regulations.</p>
+        <p>Licensed backflow preventer testing, repair, and replacement. We keep your system compliant with SAWS requirements.</p>
+        <a href="#contact" class="learn-more">Request service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
 
       <div class="service-card fade-in">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
         <h3>Drip Systems</h3>
-        <p>Drip irrigation installation and repair for gardens, flower beds, and landscaped areas — efficient watering without overspray.</p>
+        <p>Drip irrigation installation and repair for gardens, flower beds, and landscaped areas — efficient, targeted watering.</p>
+        <a href="#contact" class="learn-more">Request service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
 
       <div class="service-card fade-in">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
         <h3>Valve Locating</h3>
-        <p>Buried valves that no one can find. We locate them so repairs and upgrades can get done without tearing up the yard.</p>
+        <p>Can't find your buried valves? We locate them so repairs and upgrades can be done without tearing up the yard.</p>
+        <a href="#contact" class="learn-more">Request service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
 
     </div>
@@ -612,29 +902,60 @@
   <!-- ABOUT -->
   <section class="about" id="about">
     <div class="about-inner">
-      <div class="about-text fade-in">
-        <div class="section-label">Why Journey One Landscape Team</div>
-        <h2>Licensed. Local.<br>Straight with You.</h2>
-        <p>We're a San Antonio irrigation company, not a franchise or a call center. When you call, you talk to the person showing up to your property.</p>
-        <p>Every repair is done correctly the first time. We won't recommend work you don't need, and we'll tell you honestly when a repair makes more sense than a replacement.</p>
-        <a href="#contact" class="btn-primary">Schedule a Visit</a>
+      <div class="fade-in">
+        <div class="section-eyebrow light">Why Journey One Landscape Team</div>
+        <h2 class="section-title light">Licensed. Local.<br>Straight with You.</h2>
+        <p class="section-sub light">We're a San Antonio irrigation company — not a franchise or a call center. When you call, you talk to the person showing up to your property.</p>
+
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="about-feature-text">
+              <strong>No upsells or unnecessary work</strong>
+              <span>We'll tell you honestly when a repair makes more sense than a full replacement.</span>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="about-feature-text">
+              <strong>Fixed right the first time</strong>
+              <span>We don't cut corners and we stand behind our work.</span>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="about-feature-text">
+              <strong>Licensed and fully insured</strong>
+              <span>Texas Licensed Irrigator. Your property is protected.</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-blue">Schedule a Visit</a>
       </div>
+
       <div class="about-stats fade-in">
-        <div class="stat-box">
+        <div class="stat-card">
           <div class="stat-number">5+</div>
           <div class="stat-label">Years in business</div>
         </div>
-        <div class="stat-box">
+        <div class="stat-card">
           <div class="stat-number">LI</div>
-          <div class="stat-label">Licensed Irrigator, State of Texas</div>
+          <div class="stat-label">Texas Licensed Irrigator</div>
         </div>
-        <div class="stat-box">
+        <div class="stat-card">
           <div class="stat-number">SA</div>
           <div class="stat-label">San Antonio based, locally owned</div>
         </div>
-        <div class="stat-box">
+        <div class="stat-card">
           <div class="stat-number">Free</div>
-          <div class="stat-label">Estimates on all service calls</div>
+          <div class="stat-label">Estimates on all jobs</div>
         </div>
       </div>
     </div>
@@ -643,21 +964,20 @@
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="contact-inner">
-      <div class="section-header fade-in">
-        <div class="section-label">Get In Touch</div>
-        <h2>Request a Free Quote</h2>
-        <p>Call, text, or fill out the form. We respond the same day, Monday through Saturday.</p>
+      <div class="fade-in">
+        <div class="section-eyebrow">Get In Touch</div>
+        <h2 class="section-title dark">Request a Free Quote</h2>
+        <p class="section-sub">Call, text, or fill out the form. We get back to you the same day, Monday through Saturday.</p>
       </div>
+
       <div class="contact-grid">
         <div class="contact-info fade-in">
           <h3>Reach Us Directly</h3>
-          <p>We're available for estimates and service calls throughout San Antonio and the surrounding area. Call or text anytime during business hours.</p>
+          <p>We're available for estimates and service calls throughout San Antonio and surrounding areas. Call or text anytime during business hours.</p>
 
           <a href="tel:+17262318748" class="contact-method">
             <div class="contact-method-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
             <div class="contact-method-text">
               <strong>Call or Text</strong>
@@ -667,9 +987,7 @@
 
           <a href="mailto:joltirrigator@gmail.com" class="contact-method">
             <div class="contact-method-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
             <div class="contact-method-text">
               <strong>Email</strong>
@@ -678,49 +996,96 @@
           </a>
         </div>
 
-        <form class="contact-form fade-in" onsubmit="handleSubmit(event)">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="tel"  name="phone" placeholder="Phone Number" />
-          <input type="email" name="email" placeholder="Email Address" />
-          <textarea name="message" placeholder="Describe the issue or what you need help with..."></textarea>
-          <button type="submit">Send Message</button>
+        <!-- FORM — submissions go to joltirrigator@gmail.com via Formspree -->
+        <!-- ACTION: Replace YOUR_FORM_ID below after signing up at formspree.io -->
+        <form
+          class="contact-form fade-in"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+        >
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required />
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(210) 000-0000" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" />
+          </div>
+          <div class="form-field">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+              <option value="" disabled selected>Select a service...</option>
+              <option>Irrigation Repair</option>
+              <option>Zone Rebuild</option>
+              <option>Leak Detection</option>
+              <option>Backflow Repair</option>
+              <option>Drip System</option>
+              <option>Valve Locating</option>
+              <option>Not Sure / Other</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="message">Describe the Issue</label>
+            <textarea id="message" name="message" placeholder="Tell us what's going on and we'll get back to you with a free estimate..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn">
+            Send Message
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <p class="form-note">We respond the same day, Mon–Sat. Your info is never shared.</p>
         </form>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>© 2026 Journey One Landscape Team &nbsp;·&nbsp; San Antonio, TX &nbsp;·&nbsp; Licensed Irrigator</p>
-    <ul class="footer-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div style="font-size:1rem;font-weight:800;color:rgba(255,255,255,0.85);letter-spacing:-0.01em">
+          Journey <span style="color:var(--bright)">One</span> Landscape Team
+        </div>
+        <p>Licensed irrigation repair and system rebuilds for San Antonio homeowners and businesses. Honest work, fair prices.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Irrigation Repairs</a></li>
+          <li><a href="#services">Zone Rebuilds</a></li>
+          <li><a href="#services">Leak Detection</a></li>
+          <li><a href="#services">Backflow Repair</a></li>
+          <li><a href="#services">Drip Systems</a></li>
+          <li><a href="#services">Valve Locating</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+17262318748">(726) 231-8748</a></li>
+          <li><a href="mailto:joltirrigator@gmail.com">joltirrigator@gmail.com</a></li>
+          <li><a href="#contact">Free Quote</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Journey One Landscape Team · San Antonio, TX · Licensed Irrigator</p>
+      <p>Mon – Sat &nbsp;·&nbsp; Free Estimates</p>
+    </div>
   </footer>
 
   <script>
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.12 });
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-    function handleSubmit(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector('button');
-      const original = btn.textContent;
-      btn.textContent = 'Message Sent';
-      btn.disabled = true;
-      btn.style.background = 'var(--mid-blue)';
-      setTimeout(() => {
-        btn.textContent = original;
-        btn.disabled = false;
-        btn.style.background = '';
-        e.target.reset();
-      }, 3000);
-    }
   </script>
 
 </body>
