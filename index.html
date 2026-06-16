@@ -1,10 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ── SCHEMA MARKUP ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Journey One Landscape Team",
+    "url": "https://journeyonelandscapeteam.com",
+    "telephone": "+17262318748",
+    "email": "joltirrigator@gmail.com",
+    "description": "Licensed irrigation contractor serving San Antonio and surrounding areas. Specializing in sprinkler repair, zone rebuilds, drip irrigation, French drains, backflow repair, and valve locating. TCEQ Licensed Irrigator LI0027872.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "San Antonio",
+      "addressRegion": "TX",
+      "postalCode": "78252",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 29.4241,
+      "longitude": -98.4936
+    },
+    "areaServed": [
+      { "@type": "City", "name": "San Antonio" },
+      { "@type": "City", "name": "Helotes" },
+      { "@type": "City", "name": "Leon Valley" },
+      { "@type": "City", "name": "Converse" },
+      { "@type": "City", "name": "Schertz" },
+      { "@type": "City", "name": "Universal City" },
+      { "@type": "City", "name": "Live Oak" },
+      { "@type": "City", "name": "Windcrest" },
+      { "@type": "City", "name": "Alamo Heights" },
+      { "@type": "City", "name": "Lackland AFB" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Irrigation Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Irrigation Repair", "description": "Broken heads, damaged lines, stuck or leaking valves diagnosed and fixed same visit when possible." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Zone Rebuilds", "description": "Full zone rebuilds for proper head-to-head coverage on any lawn size." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Backflow Repair", "description": "Licensed backflow preventer testing, repair, and replacement. SAWS compliant." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drip Irrigation", "description": "Drip irrigation installation and repair for gardens, flower beds, and landscaped areas." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Valve Locating", "description": "Locate buried valves without tearing up the yard." } }
+      ]
+    },
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "license",
+      "name": "TCEQ Licensed Irrigator",
+      "identifier": "LI0027872",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Texas Commission on Environmental Quality"
+      }
+    },
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "19:00"
+      }
+    ],
+    "knowsAbout": [
+      "Irrigation Repair",
+      "Sprinkler Systems",
+      "Drip Irrigation",
+      "Backflow Prevention",
+      "French Drains",
+      "Valve Locating",
+      "Zone Rebuilds",
+      "SAWS Compliance"
+    ]
+  }
+  </script>
+
+  <!-- ── SEO META TAGS ── -->
   <meta name="google-site-verification" content="IxEOKK55iK6o5CwrQmh5I3TAtb5yOq-7-8dCl803Zf4" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Journey One Landscape Team – Irrigation Repair San Antonio, TX</title>
+
+  <!-- Primary SEO -->
+  <title>Irrigation Repair San Antonio TX | Journey One Landscape Team | Licensed Irrigator LI0027872</title>
+  <meta name="description" content="Licensed irrigation repair in San Antonio, TX. Sprinkler repair, zone rebuilds, backflow repair, drip systems & valve locating. TCEQ Licensed Irrigator LI0027872. Call (726) 231-8748." />
+  <meta name="keywords" content="irrigation repair San Antonio, sprinkler repair San Antonio, backflow repair San Antonio, drip irrigation San Antonio, licensed irrigator San Antonio, zone rebuild San Antonio, valve locating San Antonio" />
+  <meta name="author" content="Journey One Landscape Team" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://journeyonelandscapeteam.com/" />
+
+  <!-- Open Graph (for sharing on Facebook, etc.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://journeyonelandscapeteam.com/" />
+  <meta property="og:title" content="Irrigation Repair San Antonio TX | Journey One Landscape Team" />
+  <meta property="og:description" content="Licensed irrigation repair in San Antonio. Sprinkler repair, zone rebuilds, backflow repair & drip systems. TCEQ Licensed Irrigator LI0027872." />
+  <meta property="og:site_name" content="Journey One Landscape Team" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Irrigation Repair San Antonio TX | Journey One Landscape Team" />
+  <meta name="twitter:description" content="Licensed irrigation repair in San Antonio. Sprinkler repair, zone rebuilds, backflow repair & drip systems. TCEQ LI0027872." />
+
+  <!-- Geo Tags -->
+  <meta name="geo.region" content="US-TX" />
+  <meta name="geo.placename" content="San Antonio" />
+  <meta name="geo.position" content="29.4241;-98.4936" />
+  <meta name="ICBM" content="29.4241, -98.4936" />
+
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -165,9 +269,7 @@
       margin-bottom: 1.25rem;
     }
 
-    .hero h1 .highlight {
-      color: var(--bright);
-    }
+    .hero h1 .highlight { color: var(--bright); }
 
     .hero p {
       font-size: 1.05rem;
@@ -195,32 +297,11 @@
       transition: all 0.2s;
     }
 
-    .btn-blue {
-      background: var(--mid);
-      color: var(--white);
-    }
-
-    .btn-blue:hover {
-      background: var(--blue);
-      transform: translateY(-1px);
-      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
-    }
-
-    .btn-white {
-      background: rgba(255,255,255,0.1);
-      color: var(--white);
-      border: 1px solid rgba(255,255,255,0.2);
-    }
-
-    .btn-white:hover {
-      background: rgba(255,255,255,0.18);
-    }
-
-    .btn-dark {
-      background: var(--navy);
-      color: var(--white);
-    }
-
+    .btn-blue { background: var(--mid); color: var(--white); }
+    .btn-blue:hover { background: var(--blue); transform: translateY(-1px); box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35); }
+    .btn-white { background: rgba(255,255,255,0.1); color: var(--white); border: 1px solid rgba(255,255,255,0.2); }
+    .btn-white:hover { background: rgba(255,255,255,0.18); }
+    .btn-dark { background: var(--navy); color: var(--white); }
     .btn-dark:hover { background: var(--dark); }
 
     /* ── TRUST STRIP ── */
@@ -238,82 +319,36 @@
       gap: 1rem;
     }
 
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
+    .trust-item { display: flex; align-items: center; gap: 0.75rem; }
 
     .trust-icon {
-      width: 38px;
-      height: 38px;
+      width: 38px; height: 38px;
       background: var(--light);
       border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--mid);
-      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--mid); flex-shrink: 0;
     }
 
     .trust-icon svg { width: 18px; height: 18px; }
-
-    .trust-item strong {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--text);
-      line-height: 1.2;
-    }
-
-    .trust-item span {
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
+    .trust-item strong { display: block; font-size: 0.85rem; font-weight: 700; color: var(--text); line-height: 1.2; }
+    .trust-item span { font-size: 0.75rem; color: var(--muted); }
 
     /* ── SECTION SHARED ── */
     .section-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--mid);
-      margin-bottom: 0.75rem;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--mid); margin-bottom: 0.75rem;
     }
 
-    .section-eyebrow::before {
-      content: '';
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: var(--mid);
-      border-radius: 1px;
-    }
-
+    .section-eyebrow::before { content: ''; display: block; width: 22px; height: 2px; background: var(--mid); border-radius: 1px; }
     .section-eyebrow.light { color: #93c5fd; }
     .section-eyebrow.light::before { background: #93c5fd; }
 
-    h2.section-title {
-      font-size: clamp(1.85rem, 2.8vw, 2.5rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      line-height: 1.15;
-      margin-bottom: 0.875rem;
-    }
-
+    h2.section-title { font-size: clamp(1.85rem, 2.8vw, 2.5rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 0.875rem; }
     h2.section-title.dark { color: var(--navy); }
     h2.section-title.light { color: var(--white); }
 
-    .section-sub {
-      font-size: 0.975rem;
-      line-height: 1.75;
-      color: var(--muted);
-      max-width: 480px;
-    }
-
+    .section-sub { font-size: 0.975rem; line-height: 1.75; color: var(--muted); max-width: 480px; }
     .section-sub.light { color: rgba(255,255,255,0.55); }
 
     /* ── IAF TECH BAND ── */
@@ -324,507 +359,160 @@
       border-bottom: 1px solid rgba(255,255,255,0.06);
     }
 
-    .iaf-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
+    .iaf-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
     .iaf-text .section-eyebrow { color: #93c5fd; }
     .iaf-text .section-eyebrow::before { background: #93c5fd; }
-
-    .iaf-text h2 {
-      font-size: clamp(1.6rem, 2.4vw, 2.1rem);
-      font-weight: 800;
-      color: var(--white);
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-      margin-bottom: 0.875rem;
-    }
-
-    .iaf-text p {
-      font-size: 0.925rem;
-      color: rgba(255,255,255,0.55);
-      line-height: 1.75;
-      margin-bottom: 1.5rem;
-    }
+    .iaf-text h2 { font-size: clamp(1.6rem, 2.4vw, 2.1rem); font-weight: 800; color: var(--white); letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 0.875rem; }
+    .iaf-text p { font-size: 0.925rem; color: rgba(255,255,255,0.55); line-height: 1.75; margin-bottom: 1.5rem; }
 
     .iaf-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      background: rgba(59,130,246,0.15);
-      border: 1px solid rgba(59,130,246,0.35);
-      color: #93c5fd;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.45rem 1rem;
-      border-radius: 2rem;
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.35);
+      color: #93c5fd; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 0.45rem 1rem; border-radius: 2rem;
     }
 
     .iaf-badge svg { width: 13px; height: 13px; }
 
-    .iaf-features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
+    .iaf-features { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 
     .iaf-feature {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 8px;
-      padding: 1.25rem 1.125rem;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px; padding: 1.25rem 1.125rem;
       transition: background 0.2s, border-color 0.2s;
     }
 
-    .iaf-feature:hover {
-      background: rgba(59,130,246,0.1);
-      border-color: rgba(59,130,246,0.25);
-    }
+    .iaf-feature:hover { background: rgba(59,130,246,0.1); border-color: rgba(59,130,246,0.25); }
 
-    .iaf-feature-icon {
-      width: 34px;
-      height: 34px;
-      background: rgba(59,130,246,0.15);
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--bright);
-      margin-bottom: 0.75rem;
-    }
-
+    .iaf-feature-icon { width: 34px; height: 34px; background: rgba(59,130,246,0.15); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--bright); margin-bottom: 0.75rem; }
     .iaf-feature-icon svg { width: 16px; height: 16px; }
+    .iaf-feature strong { display: block; font-size: 0.85rem; font-weight: 700; color: var(--white); margin-bottom: 0.2rem; }
+    .iaf-feature span { font-size: 0.78rem; color: rgba(255,255,255,0.42); line-height: 1.5; }
 
-    .iaf-feature strong {
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 0.2rem;
-    }
-
-    .iaf-feature span {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.42);
-      line-height: 1.5;
-    }
-
-    @media (max-width: 900px) {
-      .iaf-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-    }
+    @media (max-width: 900px) { .iaf-inner { grid-template-columns: 1fr; gap: 2.5rem; } }
 
     /* ── SERVICES ── */
-    .services {
-      padding: 5.5rem 5%;
-      background: var(--gray);
-    }
-
-    .services-header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
+    .services { padding: 5.5rem 5%; background: var(--gray); }
+    .services-header { text-align: center; margin-bottom: 3rem; }
     .services-header .section-eyebrow { justify-content: center; }
     .services-header .section-eyebrow::before { display: none; }
     .services-header .section-sub { margin: 0 auto; }
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; max-width: 1100px; margin: 0 auto; }
 
     .service-card {
-      background: var(--white);
-      border: 1px solid #e2e8f0;
-      border-radius: 8px;
-      padding: 1.875rem 1.75rem;
-      transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+      background: var(--white); border: 1px solid #e2e8f0; border-radius: 8px;
+      padding: 1.875rem 1.75rem; transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
     }
 
-    .service-card:hover {
-      box-shadow: 0 10px 40px rgba(15, 23, 42, 0.1);
-      border-color: var(--border);
-      transform: translateY(-3px);
-    }
+    .service-card:hover { box-shadow: 0 10px 40px rgba(15, 23, 42, 0.1); border-color: var(--border); transform: translateY(-3px); }
 
-    .service-icon {
-      width: 46px;
-      height: 46px;
-      background: var(--light);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--mid);
-      margin-bottom: 1.25rem;
-    }
-
+    .service-icon { width: 46px; height: 46px; background: var(--light); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--mid); margin-bottom: 1.25rem; }
     .service-icon svg { width: 22px; height: 22px; }
+    .service-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+    .service-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.7; }
+    .service-card .learn-more { display: inline-flex; align-items: center; gap: 0.35rem; margin-top: 1rem; font-size: 0.82rem; font-weight: 600; color: var(--mid); text-decoration: none; transition: gap 0.2s; }
+    .service-card .learn-more:hover { gap: 0.6rem; }
 
-    .service-card h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--text);
+    /* ── SERVICE AREAS ── */
+    .service-areas {
+      padding: 4rem 5%;
+      background: var(--white);
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .service-areas-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .service-areas h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--navy);
       margin-bottom: 0.5rem;
       letter-spacing: -0.01em;
     }
 
-    .service-card p {
-      font-size: 0.875rem;
+    .service-areas p {
+      font-size: 0.9rem;
       color: var(--muted);
-      line-height: 1.7;
+      margin-bottom: 1.5rem;
     }
 
-    .service-card .learn-more {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      margin-top: 1rem;
+    .areas-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.625rem;
+      justify-content: center;
+    }
+
+    .area-tag {
+      background: var(--light);
+      border: 1px solid var(--border);
+      color: var(--mid);
       font-size: 0.82rem;
       font-weight: 600;
-      color: var(--mid);
-      text-decoration: none;
-      transition: gap 0.2s;
+      padding: 0.4rem 0.875rem;
+      border-radius: 2rem;
     }
-
-    .service-card .learn-more:hover { gap: 0.6rem; }
 
     /* ── ABOUT ── */
-    .about {
-      padding: 6rem 5%;
-      background: var(--navy);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .about::before {
-      content: '';
-      position: absolute;
-      right: -5%;
-      top: -10%;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(37, 99, 235, 0.2) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .about-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 5rem;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .about-features {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-      margin: 2rem 0;
-    }
-
-    .about-feature {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-
-    .about-feature-icon {
-      width: 36px;
-      height: 36px;
-      background: rgba(59, 130, 246, 0.15);
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--bright);
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
+    .about { padding: 6rem 5%; background: var(--navy); position: relative; overflow: hidden; }
+    .about::before { content: ''; position: absolute; right: -5%; top: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(37, 99, 235, 0.2) 0%, transparent 70%); pointer-events: none; }
+    .about-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 5rem; align-items: center; position: relative; z-index: 1; }
+    .about-features { display: flex; flex-direction: column; gap: 1.25rem; margin: 2rem 0; }
+    .about-feature { display: flex; gap: 1rem; align-items: flex-start; }
+    .about-feature-icon { width: 36px; height: 36px; background: rgba(59, 130, 246, 0.15); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--bright); flex-shrink: 0; margin-top: 1px; }
     .about-feature-icon svg { width: 17px; height: 17px; }
-
-    .about-feature-text strong {
-      display: block;
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 0.2rem;
-    }
-
-    .about-feature-text span {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.5);
-      line-height: 1.5;
-    }
-
-    .about-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .stat-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 8px;
-      padding: 1.5rem 1.25rem;
-      transition: background 0.2s;
-    }
-
+    .about-feature-text strong { display: block; font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 0.2rem; }
+    .about-feature-text span { font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.5; }
+    .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .stat-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.5rem 1.25rem; transition: background 0.2s; }
     .stat-card:hover { background: rgba(255,255,255,0.08); }
-
-    .stat-number {
-      font-size: 2.1rem;
-      font-weight: 800;
-      color: var(--bright);
-      letter-spacing: -0.03em;
-      line-height: 1;
-      margin-bottom: 0.35rem;
-    }
-
-    .stat-label {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.45);
-      line-height: 1.45;
-    }
+    .stat-number { font-size: 2.1rem; font-weight: 800; color: var(--bright); letter-spacing: -0.03em; line-height: 1; margin-bottom: 0.35rem; }
+    .stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.45; }
 
     /* ── CONTACT ── */
-    .contact {
-      padding: 6rem 5%;
-      background: var(--white);
-    }
-
-    .contact-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 4rem;
-      margin-top: 3rem;
-    }
-
-    .contact-info h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.01em;
-    }
-
-    .contact-info > p {
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.75;
-      margin-bottom: 2rem;
-    }
-
-    .contact-method {
-      display: flex;
-      align-items: center;
-      gap: 0.875rem;
-      margin-bottom: 1rem;
-      text-decoration: none;
-      color: var(--text);
-      padding: 0.875rem 1rem;
-      border: 1px solid #e2e8f0;
-      border-radius: 7px;
-      transition: border-color 0.2s, background 0.2s;
-    }
-
-    .contact-method:hover {
-      border-color: var(--border);
-      background: var(--light);
-    }
-
-    .contact-method-icon {
-      width: 40px;
-      height: 40px;
-      background: var(--light);
-      border-radius: 7px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--mid);
-      flex-shrink: 0;
-    }
-
+    .contact { padding: 6rem 5%; background: var(--white); }
+    .contact-inner { max-width: 1000px; margin: 0 auto; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; margin-top: 3rem; }
+    .contact-info h3 { font-size: 1.25rem; font-weight: 700; color: var(--text); margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+    .contact-info > p { font-size: 0.9rem; color: var(--muted); line-height: 1.75; margin-bottom: 2rem; }
+    .contact-method { display: flex; align-items: center; gap: 0.875rem; margin-bottom: 1rem; text-decoration: none; color: var(--text); padding: 0.875rem 1rem; border: 1px solid #e2e8f0; border-radius: 7px; transition: border-color 0.2s, background 0.2s; }
+    .contact-method:hover { border-color: var(--border); background: var(--light); }
+    .contact-method-icon { width: 40px; height: 40px; background: var(--light); border-radius: 7px; display: flex; align-items: center; justify-content: center; color: var(--mid); flex-shrink: 0; }
     .contact-method-icon svg { width: 17px; height: 17px; }
-
-    .contact-method-text strong {
-      display: block;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.15rem;
-    }
-
-    .contact-method-text span {
-      font-size: 0.95rem;
-      color: var(--text);
-      font-weight: 600;
-    }
+    .contact-method-text strong { display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.15rem; }
+    .contact-method-text span { font-size: 0.95rem; color: var(--text); font-weight: 600; }
 
     /* ── FORM ── */
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-
     .contact-form { display: flex; flex-direction: column; gap: 0.75rem; }
-
     .form-field { display: flex; flex-direction: column; }
-
-    .form-field label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--body);
-      margin-bottom: 0.35rem;
-      letter-spacing: 0.02em;
-    }
-
-    .contact-form input,
-    .contact-form select,
-    .contact-form textarea {
-      width: 100%;
-      padding: 0.75rem 0.9rem;
-      border: 1px solid #cbd5e1;
-      border-radius: 5px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.9rem;
-      color: var(--text);
-      background: var(--white);
-      outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .contact-form input:focus,
-    .contact-form select:focus,
-    .contact-form textarea:focus {
-      border-color: var(--mid);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-    }
-
+    .form-field label { font-size: 0.75rem; font-weight: 600; color: var(--body); margin-bottom: 0.35rem; letter-spacing: 0.02em; }
+    .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 0.75rem 0.9rem; border: 1px solid #cbd5e1; border-radius: 5px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; color: var(--text); background: var(--white); outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
+    .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--mid); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
     .contact-form textarea { resize: vertical; min-height: 105px; }
-
-    .contact-form .submit-btn {
-      background: var(--mid);
-      color: var(--white);
-      border: none;
-      padding: 0.875rem 2rem;
-      border-radius: 5px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      width: 100%;
-      justify-content: center;
-    }
-
-    .contact-form .submit-btn:hover {
-      background: var(--blue);
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
-    }
-
-    .form-note {
-      font-size: 0.75rem;
-      color: var(--muted);
-      text-align: center;
-      line-height: 1.5;
-    }
+    .contact-form .submit-btn { background: var(--mid); color: var(--white); border: none; padding: 0.875rem 2rem; border-radius: 5px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: background 0.2s, transform 0.2s, box-shadow 0.2s; display: flex; align-items: center; gap: 0.5rem; width: 100%; justify-content: center; }
+    .contact-form .submit-btn:hover { background: var(--blue); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3); }
+    .form-note { font-size: 0.75rem; color: var(--muted); text-align: center; line-height: 1.5; }
 
     /* ── FOOTER ── */
-    footer {
-      background: var(--navy);
-      padding: 3rem 5% 2rem;
-    }
-
-    .footer-top {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 3rem;
-      padding-bottom: 2.5rem;
-      border-bottom: 1px solid rgba(255,255,255,0.07);
-    }
-
-    .footer-brand p {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.4);
-      line-height: 1.7;
-      margin-top: 0.75rem;
-      max-width: 280px;
-    }
-
-    .footer-col h4 {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.35);
-      margin-bottom: 1rem;
-    }
-
+    footer { background: var(--navy); padding: 3rem 5% 2rem; }
+    .footer-top { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 3rem; padding-bottom: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .footer-brand p { font-size: 0.85rem; color: rgba(255,255,255,0.4); line-height: 1.7; margin-top: 0.75rem; max-width: 280px; }
+    .footer-col h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1rem; }
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
-
-    .footer-col ul a {
-      font-size: 0.875rem;
-      color: rgba(255,255,255,0.5);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
+    .footer-col ul a { font-size: 0.875rem; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
     .footer-col ul a:hover { color: rgba(255,255,255,0.85); }
-
-    .footer-bottom {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding-top: 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .footer-bottom p {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.3);
-    }
+    .footer-bottom { max-width: 1100px; margin: 0 auto; padding-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+    .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
 
     /* ── ANIMATION ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
 
     /* ── RESPONSIVE ── */
@@ -923,7 +611,7 @@
         </div>
         <div>
           <strong>Same-Day Response</strong>
-          <span>Mon – Fri</span>
+          <span>Mon – Sat</span>
         </div>
       </div>
       <div class="trust-item fade-in">
@@ -987,7 +675,7 @@
   <section class="services" id="services">
     <div class="services-header fade-in">
       <div class="section-eyebrow">What We Do</div>
-      <h2 class="section-title dark" style="margin-bottom:0.5rem">Irrigation Services</h2>
+      <h2 class="section-title dark" style="margin-bottom:0.5rem">Irrigation Services in San Antonio, TX</h2>
       <p class="section-sub">Residential and commercial — repairs, rebuilds, and everything in between.</p>
     </div>
     <div class="services-grid">
@@ -996,7 +684,7 @@
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6 9 4 13 4 16a8 8 0 0 0 16 0c0-3-2-7-8-14z"/></svg>
         </div>
-        <h3>Irrigation Repairs</h3>
+        <h3>Irrigation Repairs San Antonio</h3>
         <p>Broken heads, damaged lines, stuck or leaking valves. We diagnose and fix it the same visit when possible.</p>
         <a href="#contact" class="learn-more">Request service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
@@ -1005,7 +693,7 @@
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
         </div>
-        <h3>Zone Rebuilds</h3>
+        <h3>Sprinkler Zone Rebuilds</h3>
         <p>Full zone rebuilds for proper head-to-head coverage on any lawn size, using the right heads for your soil type.</p>
         <a href="#contact" class="learn-more">Request service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
@@ -1014,7 +702,7 @@
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <h3>Backflow Repair</h3>
+        <h3>Backflow Repair San Antonio</h3>
         <p>Licensed backflow preventer testing, repair, and replacement. We keep your system compliant with SAWS requirements.</p>
         <a href="#contact" class="learn-more">Request service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
@@ -1023,7 +711,7 @@
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
-        <h3>Drip Systems</h3>
+        <h3>Drip Irrigation Systems</h3>
         <p>Drip irrigation installation and repair for gardens, flower beds, and landscaped areas — efficient, targeted watering.</p>
         <a href="#contact" class="learn-more">Request service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
@@ -1037,6 +725,28 @@
         <a href="#contact" class="learn-more">Request service <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:13px;height:13px"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
 
+    </div>
+  </section>
+
+  <!-- SERVICE AREAS -->
+  <section class="service-areas">
+    <div class="service-areas-inner fade-in">
+      <h2>Serving San Antonio &amp; Surrounding Areas</h2>
+      <p>We provide licensed irrigation repair throughout Bexar County and neighboring communities.</p>
+      <div class="areas-grid">
+        <span class="area-tag">San Antonio</span>
+        <span class="area-tag">Helotes</span>
+        <span class="area-tag">Leon Valley</span>
+        <span class="area-tag">Converse</span>
+        <span class="area-tag">Schertz</span>
+        <span class="area-tag">Universal City</span>
+        <span class="area-tag">Live Oak</span>
+        <span class="area-tag">Windcrest</span>
+        <span class="area-tag">Alamo Heights</span>
+        <span class="area-tag">Lackland AFB</span>
+        <span class="area-tag">Stone Oak</span>
+        <span class="area-tag">Southside SA</span>
+      </div>
     </div>
   </section>
 
@@ -1108,13 +818,13 @@
       <div class="fade-in">
         <div class="section-eyebrow">Get In Touch</div>
         <h2 class="section-title dark">Request a Quote</h2>
-        <p class="section-sub">Call, text, or fill out the form. We get back to you the same day, Monday through Friday.</p>
+        <p class="section-sub">Call, text, or fill out the form. We get back to you the same day, Monday through Saturday.</p>
       </div>
 
       <div class="contact-grid">
         <div class="contact-info fade-in">
           <h3>Reach Us Directly</h3>
-          <p>We're available for estimates and service calls throughout San Antonio and surrounding areas. Call or text anytime during business hours.</p>
+          <p>We're available for estimates and service calls throughout San Antonio and surrounding areas. Call or text anytime during business hours — 7am to 7pm, Monday through Saturday.</p>
 
           <a href="tel:+17262318748" class="contact-method">
             <div class="contact-method-icon">
@@ -1137,13 +847,7 @@
           </a>
         </div>
 
-        <!-- FORM — submissions go to joltirrigator@gmail.com via Formspree -->
-        <!-- ACTION: Replace YOUR_FORM_ID below after signing up at formspree.io -->
-        <form
-          class="contact-form fade-in"
-          action="https://formspree.io/f/xredpdlw"
-          method="POST"
-        >
+        <form class="contact-form fade-in" action="https://formspree.io/f/xredpdlw" method="POST">
           <div class="form-row">
             <div class="form-field">
               <label for="name">Full Name *</label>
@@ -1178,7 +882,7 @@
             Send Message
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </button>
-          <p class="form-note">We respond the same day, Mon–Fri. Your info is never shared.</p>
+          <p class="form-note">We respond the same day, Mon–Sat. Your info is never shared.</p>
         </form>
       </div>
     </div>
@@ -1204,18 +908,19 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h4>Service Areas</h4>
         <ul>
-          <li><a href="tel:+17262318748">(726) 231-8748</a></li>
-          <li><a href="mailto:joltirrigator@gmail.com">joltirrigator@gmail.com</a></li>
-          <li><a href="#contact">Get a Quote</a></li>
-          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">San Antonio</a></li>
+          <li><a href="#contact">Helotes</a></li>
+          <li><a href="#contact">Leon Valley</a></li>
+          <li><a href="#contact">Converse</a></li>
+          <li><a href="#contact">Schertz</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Journey One Landscape Team · San Antonio, TX · Lic. #LI0027872</p>
-      <p>Mon – Fri</p>
+      <p>© 2026 Journey One Landscape Team · San Antonio, TX 78252 · TCEQ Lic. #LI0027872</p>
+      <p>Mon – Sat · 7am – 7pm · (726) 231-8748</p>
     </div>
   </footer>
 
