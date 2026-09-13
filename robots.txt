@@ -11,3 +11,5 @@ Sitemap: https://www.journeyonelandscapeteam.com/sitemap.xml
 Disallow: /cgi-bin/
 Disallow: /tmp/
 Disallow: /private/
+Disallow: /staff-portal
+Disallow: /staff-portal/
