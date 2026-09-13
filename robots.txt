@@ -1,11 +1,11 @@
 # Journey One Landscape Team - robots.txt
-# https://journeyonelandscapeteam.com
+# https://www.journeyonelandscapeteam.com
 
 User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://journeyonelandscapeteam.com/sitemap.xml
+Sitemap: https://www.journeyonelandscapeteam.com/sitemap.xml
 
 # Block common junk paths
 Disallow: /cgi-bin/
