@@ -1,0 +1,15 @@
+# Journey One Landscape Team - robots.txt
+# https://www.journeyonelandscapeteam.com
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.journeyonelandscapeteam.com/sitemap.xml
+
+# Block common junk paths
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /staff-portal
+Disallow: /staff-portal/
