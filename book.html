@@ -43,7 +43,7 @@
     .booking-card-header { padding: 1.75rem 2rem 1.25rem; border-bottom: 1px solid #f1f5f9; }
     .booking-card-header h2 { font-size: 1.25rem; font-weight: 800; color: var(--navy); margin-bottom: 0.4rem; }
     .booking-card-header p { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
-    .calendly-wrap { padding: 0.5rem; }
+    .booking-embed-wrap { padding: 0.5rem; }
 
     .alt-contact { max-width: 950px; margin: 2rem auto 0; background: var(--light); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
     .alt-contact-text strong { display: block; font-size: 0.95rem; color: var(--navy); margin-bottom: 0.2rem; }
@@ -88,7 +88,7 @@
       </div>
       <div class="info-item">
         <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-        <div><strong>4-Hour Arrival Windows</strong><span>8am, 10am, or 1pm</span></div>
+        <div><strong>3-Hour Arrival Windows</strong><span>9am, 11am, or 1pm</span></div>
       </div>
       <div class="info-item">
         <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
@@ -103,11 +103,12 @@
         <h2>Select a Date &amp; Time</h2>
         <p>Choose your preferred arrival window. We serve San Antonio and surrounding areas including Helotes, Leon Valley, Converse, Schertz, Universal City, and Live Oak.</p>
       </div>
-      <div class="calendly-wrap">
-        <!-- Calendly inline widget begin -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/manny-journeyonelandscapeteam/book?hide_gdpr_banner=1&primary_color=2563eb" style="min-width:320px;height:700px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        <!-- Calendly inline widget end -->
+      <div class="booking-embed-wrap">
+        <iframe
+          src="https://jolt-down.web.app/embed/journey-one"
+          style="width:100%;min-width:320px;height:900px;border:0;"
+          title="Book a service call">
+        </iframe>
       </div>
     </div>
 
