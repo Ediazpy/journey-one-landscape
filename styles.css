@@ -1,67 +1,39 @@
 /* Journey One Landscape Team — shared styles for every page.
-   Tokens first; components use tokens only, so dark mode is a token swap. */
+   One dark-navy theme across the whole site (same navy, gold and terracotta as Inkwell Books). */
 
 :root {
-  color-scheme: light;
-  /* Same family as the Inkwell Books bookstore: paper, navy, terracotta, gold. */
-  --bg: #faf7f2;
-  --surface: #ffffff;
-  --surface-2: #f3eee5;
-  --ink: #1d2433;
-  --body: #4b5468;
-  --muted: #7a8194;
-  --line: #e7e1d7;
-  --line-strong: #d7cebf;
-  --leaf: #c2502e;
-  --leaf-strong: #a8421f;
-  --leaf-soft: #f8e8e0;
+  color-scheme: dark;
+  --bg: #1f2a44;
+  --surface: #27345a;
+  --surface-2: #1a2440;
+  --ink: #f4f1ea;
+  --body: #c8cedc;
+  --muted: #9aa4bb;
+  --line: #34426a;
+  --line-strong: #46557f;
+  --leaf: #d1603b;
+  --leaf-strong: #e07049;
+  --leaf-soft: #3b3046;
   --on-leaf: #ffffff;
-  --water: #3a4d84;
-  --water-soft: #e9ecf6;
+  --water: #a9b8ec;
+  --water-soft: #2f3c63;
   --sun: #d9a441;
-  --deep: #1f2a44;
-  --deep-2: #283557;
+  --deep: #18213a;
+  --deep-2: #24304f;
   --deep-accent: #d9a441;
   --deep-glow: rgba(58, 63, 143, 0.75);
-  --lawn: #3f8f5f;
-  --lawn-soft: #a9d2b4;
-  --on-deep: #eef5f0;
-  --on-deep-muted: rgba(238, 245, 240, 0.7);
-  --on-deep-line: rgba(238, 245, 240, 0.14);
-  --shadow-sm: 0 1px 2px rgba(19, 36, 29, 0.06);
-  --shadow: 0 1px 2px rgba(19, 36, 29, 0.05), 0 10px 30px -10px rgba(19, 36, 29, 0.18);
+  --lawn: #4a9a69;
+  --lawn-soft: #2f6247;
+  --on-deep: #f4f1ea;
+  --on-deep-muted: rgba(244, 241, 234, 0.72);
+  --on-deep-line: rgba(244, 241, 234, 0.14);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 14px 34px -14px rgba(0, 0, 0, 0.55);
   --radius: 18px;
   --radius-sm: 12px;
   --gutter: clamp(16px, 4vw, 32px);
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --bg: #14171f;
-    --surface: #1c2029;
-    --surface-2: #20252f;
-    --ink: #eceae6;
-    --body: #c3c7d1;
-    --muted: #8d94a5;
-    --line: #2c313d;
-    --line-strong: #3b4150;
-    --leaf: #e2734f;
-    --leaf-strong: #ec8c6c;
-    --leaf-soft: #3a2420;
-    --on-leaf: #1b0f0b;
-    --water: #9aa9e0;
-    --water-soft: #252b40;
-    --sun: #e0b056;
-    --deep: #0e1220;
-    --deep-2: #171d31;
-    --lawn: #4e9f6e;
-    --lawn-soft: #2c5a40;
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px -12px rgba(0, 0, 0, 0.6);
-  }
 }
 
 /* ── Base ─────────────────────────────────────────── */
@@ -482,3 +454,13 @@ a.chip:hover { border-color: var(--leaf); color: var(--leaf); }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+/* Navy-wide accents */
+body { background: radial-gradient(1200px 520px at 85% -5%, rgba(58, 63, 143, 0.55) 0%, transparent 60%), var(--bg); background-repeat: no-repeat; background-color: var(--bg); }
+.eyebrow { color: var(--deep-accent); }
+h1 em, h2 em { color: var(--deep-accent); }
+.hero { background: transparent !important; }
+.art-cloud { fill: #ffffff; opacity: .85; }
+.art-card { background: linear-gradient(180deg, #3a4a7a 0%, #2a3760 70%); }
+.step::before { background: var(--deep-accent); color: #1f2a44; }
+.btn-ghost { color: var(--ink); border-color: var(--line-strong); }
+.btn-ghost:hover { border-color: var(--ink); }
