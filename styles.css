@@ -11,9 +11,9 @@
   --muted: #9aa4bb;
   --line: #34426a;
   --line-strong: #46557f;
-  --leaf: #d1603b;
-  --leaf-strong: #e07049;
-  --leaf-soft: #3b3046;
+  --leaf: #3b82f6;
+  --leaf-strong: #2563eb;
+  --leaf-soft: #263f78;
   --on-leaf: #ffffff;
   --water: #a9b8ec;
   --water-soft: #2f3c63;
@@ -464,3 +464,10 @@ h1 em, h2 em { color: var(--deep-accent); }
 .step::before { background: var(--deep-accent); color: #1f2a44; }
 .btn-ghost { color: var(--ink); border-color: var(--line-strong); }
 .btn-ghost:hover { border-color: var(--ink); }
+/* Buttons match the Jolt-Down booking widget: blue gradient, soft blue glow. */
+.btn-primary { background: linear-gradient(135deg, #1a4dbd, #2563eb); color: #ffffff; box-shadow: 0 8px 20px -10px rgba(37, 99, 235, 0.6); }
+.btn-primary:hover { background: linear-gradient(135deg, #1a4dbd, #2563eb); box-shadow: 0 8px 20px rgba(37, 99, 235, 0.34); transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(1px); }
+.btn-light { background: linear-gradient(135deg, #1a4dbd, #2563eb); color: #ffffff; }
+.btn-light:hover { background: linear-gradient(135deg, #1a4dbd, #2563eb); box-shadow: 0 8px 20px rgba(37, 99, 235, 0.34); }
+.text-link { color: #6ea2ff; }
