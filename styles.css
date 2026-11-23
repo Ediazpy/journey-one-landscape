@@ -3,25 +3,26 @@
 
 :root {
   color-scheme: light;
-  --bg: #f6f8fb;
+  /* Same family as the Inkwell Books bookstore: paper, navy, terracotta, gold. */
+  --bg: #faf7f2;
   --surface: #ffffff;
-  --surface-2: #edf1f7;
-  --ink: #0f1d33;
-  --body: #3a4659;
-  --muted: #647086;
-  --line: #e0e6ef;
-  --line-strong: #cbd5e3;
-  --leaf: #1b5fae;
-  --leaf-strong: #144b8c;
-  --leaf-soft: #e3edfa;
+  --surface-2: #f3eee5;
+  --ink: #1d2433;
+  --body: #4b5468;
+  --muted: #7a8194;
+  --line: #e7e1d7;
+  --line-strong: #d7cebf;
+  --leaf: #c2502e;
+  --leaf-strong: #a8421f;
+  --leaf-soft: #f8e8e0;
   --on-leaf: #ffffff;
-  --water: #0b8fb9;
-  --water-soft: #def3f8;
-  --sun: #e8a43a;
-  --deep: #0c1e38;
-  --deep-2: #12294a;
-  --deep-accent: #9cc8ff;
-  --deep-glow: rgba(90, 160, 240, 0.22);
+  --water: #3a4d84;
+  --water-soft: #e9ecf6;
+  --sun: #d9a441;
+  --deep: #1f2a44;
+  --deep-2: #283557;
+  --deep-accent: #d9a441;
+  --deep-glow: rgba(58, 63, 143, 0.75);
   --lawn: #3f8f5f;
   --lawn-soft: #a9d2b4;
   --on-deep: #eef5f0;
@@ -33,29 +34,29 @@
   --radius-sm: 12px;
   --gutter: clamp(16px, 4vw, 32px);
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
-  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --bg: #0a1120;
-    --surface: #101a2d;
-    --surface-2: #152238;
-    --ink: #eaf0f8;
-    --body: #c1ccdc;
-    --muted: #8d9ab0;
-    --line: #20304b;
-    --line-strong: #2d4266;
-    --leaf: #5ea8f2;
-    --leaf-strong: #86bff6;
-    --leaf-soft: #13284a;
-    --on-leaf: #061222;
-    --water: #4cc4e2;
-    --water-soft: #0e2c3a;
-    --sun: #eeb04e;
-    --deep: #060d19;
-    --deep-2: #0d1830;
+    --bg: #14171f;
+    --surface: #1c2029;
+    --surface-2: #20252f;
+    --ink: #eceae6;
+    --body: #c3c7d1;
+    --muted: #8d94a5;
+    --line: #2c313d;
+    --line-strong: #3b4150;
+    --leaf: #e2734f;
+    --leaf-strong: #ec8c6c;
+    --leaf-soft: #3a2420;
+    --on-leaf: #1b0f0b;
+    --water: #9aa9e0;
+    --water-soft: #252b40;
+    --sun: #e0b056;
+    --deep: #0e1220;
+    --deep-2: #171d31;
     --lawn: #4e9f6e;
     --lawn-soft: #2c5a40;
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
@@ -158,12 +159,17 @@ p { max-width: 65ch; }
 .mobile-nav .btn { margin-top: 1rem; width: 100%; border-bottom: 0; color: var(--on-leaf); }
 
 /* ── Hero ─────────────────────────────────────────── */
-.hero { position: relative; padding: clamp(3rem, 7vw, 6rem) 0 clamp(3.5rem, 7vw, 6rem); overflow: hidden; }
-.hero::before {
-  content: ""; position: absolute; inset: -20% -10% auto auto; width: 70%; height: 120%;
-  background: radial-gradient(closest-side, color-mix(in srgb, var(--water) 14%, transparent), transparent);
-  pointer-events: none;
-}
+.hero { position: relative; padding: clamp(3rem, 7vw, 6rem) 0 clamp(3.5rem, 7vw, 6rem); overflow: hidden; background: radial-gradient(1200px 420px at 80% -10%, #3a3f8f 0%, transparent 60%), var(--deep); color: var(--on-deep-muted); }
+.hero h1 { color: var(--on-deep); }
+.hero h1 em { color: var(--deep-accent); }
+.hero .lead { color: var(--on-deep-muted); }
+.hero .hero-tag { background: rgba(255, 255, 255, 0.08); border-color: var(--on-deep-line); color: var(--on-deep); box-shadow: none; }
+.hero .hero-tag .dot { background: rgba(217, 164, 65, 0.2); color: var(--deep-accent); }
+.hero .btn-ghost { color: var(--on-deep); border-color: var(--on-deep-line); }
+.hero .btn-ghost:hover { border-color: var(--on-deep); }
+.hero-proof { color: var(--on-deep-muted) !important; }
+.hero-proof svg { color: var(--deep-accent) !important; }
+.hero .art-card { border-color: var(--on-deep-line); }
 .hero-grid { position: relative; display: grid; grid-template-columns: 1.08fr .92fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
 .hero-tag {
   display: inline-flex; align-items: center; gap: .5rem; padding: .4rem .85rem .4rem .45rem;
